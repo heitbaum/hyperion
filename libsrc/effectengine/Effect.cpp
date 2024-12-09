@@ -120,7 +120,6 @@ void Effect::run()
 	// Clean up the thread state
 	Py_EndInterpreter(_interpreterThreadState);
 	_interpreterThreadState = nullptr;
-	PyEval_ReleaseLock();
 }
 
 int Effect::getPriority() const
